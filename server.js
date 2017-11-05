@@ -46,6 +46,14 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/profile', (req, res) => {
+    res.render('portfolio',{
+        pageTitle: 'My Profile',
+        name: 'Sikarin Poonsawat',
+        age: 21
+    });
+});
+
 app.get('/bad', (req, res) => {
     res.send({
         errorMessage: 'something wrong!'
